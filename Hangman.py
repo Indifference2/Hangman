@@ -1,7 +1,10 @@
+import os
 import random
 from hangman_art import logo, stages
 from hangman_words import word_list
-
+def clear_console():
+        os.system("cls")
+        
 chosen_word = random.choice(word_list) #Choose a random word for the word_list
 print (logo)
 
@@ -14,6 +17,7 @@ for i in chosen_word:
 #Add "_" in the list
 while not EndGame :
     guess = str (input ("Guess a letter :")).lower()
+    clear_console()
     #User input
     print ("\n")
     guess_already_enter += guess 
